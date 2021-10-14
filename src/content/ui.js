@@ -76,22 +76,23 @@ export const renderCharacterTemplate = characterId => {
     ).insertAfter(header);
 
     const combatStatsContainer = $(combatStatsTemplate).appendTo(block);
-    const combatStatsContainer2 = $(combatStatsTemplate2).appendTo(block);
-    const modificatorStatsContainer = $(modificatorStatsTemplate).appendTo(
-      block
-    );
-    const passiveStatsContainer = $(passiveStatsTemplate).appendTo(block);
+    // const combatStatsContainer2 = $(combatStatsTemplate2).appendTo(block);
+    // const modificatorStatsContainer = $(modificatorStatsTemplate).appendTo(
+    //   block
+    // );
+    // const passiveStatsContainer = $(passiveStatsTemplate).appendTo(block);
 
-    combatStatsContainer.append(initiativeBlock);
+    // combatStatsContainer.append(initiativeBlock);
+    combatStatsContainer.append(speedBlock);
     combatStatsContainer.append(armorClassBlock);
     combatStatsContainer.append(hitPointBlock);
 
-    combatStatsContainer2.append(speedBlock);
-    combatStatsContainer2.append(saveDcBlock);
-
-    modificatorStatsContainer.append(savingThrowsBlock);
-
-    passiveStatsContainer.append(passiveSkillsBlock);
+    // combatStatsContainer2.append(speedBlock);
+    // combatStatsContainer2.append(saveDcBlock);
+    //
+    // modificatorStatsContainer.append(savingThrowsBlock);
+    //
+    // passiveStatsContainer.append(passiveSkillsBlock);
   }
 };
 

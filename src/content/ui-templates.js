@@ -21,12 +21,9 @@ export const initiativeBlock = `
 
 export const armorClassBlock = `
 <div class="ddbdms__block ddbdms__ac">
-  <div class="ddbdms__heading">
-    <div class="ddbdms__label">armor</div>
-  </div>
   <div class="ddbdms__value"></div>
   <div class="ddbdms__footer">
-    <div class="ddbdms__label">Class</div>
+    <div class="ddbdms__label">AC</div>
   </div>
 </div>
 `;
@@ -45,9 +42,6 @@ export const hitPointBlock = `
 
 export const speedBlock = `
 <div class="ddbdms__block ddbdms__speed">
-  <div class="ddbdms__heading">
-    <div class="ddbdms__label">Speed</div>
-  </div>
   <div class="ddbdms__inlineGroup"></div>
 </div>
 `;

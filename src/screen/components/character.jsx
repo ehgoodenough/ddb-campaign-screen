@@ -251,14 +251,6 @@ const Character = ({ character }) => {
             <GridItem size={1 / 3}>{renderHP(hp)}</GridItem>
           </Grid>
         </RowContainer>
-        <RowContainer>
-          <Grid verticalAlign={'center'}>
-            <GridItem size={1 / 2}>{renderSpeeds(speeds)}</GridItem>
-            <GridItem size={1 / 2}>{renderDCs(dcs)}</GridItem>
-          </Grid>
-        </RowContainer>
-        <RowContainer>{renderSavingThrows(savingThrows)}</RowContainer>
-        <RowContainer>{renderSkills(passiveSkills, senses)}</RowContainer>
       </StatsContainer>
     </MainContainer>
   );
