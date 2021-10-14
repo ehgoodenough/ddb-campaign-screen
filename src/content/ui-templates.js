@@ -120,4 +120,13 @@ export const passiveSkillsItemBlock = (type, value, bonus) => `
 </div>
 `;
 
+export const electrumBlock = `
+<div class="ddbdms__block ddbdms__electrum">
+  <div class="ddbdms__value"></div>
+  <div class="ddbdms__footer">
+    <div class="ddbdms__label">Tokens</div>
+  </div>
+</div>
+`;
+
 export const senseItem = value => `<span>${value}</div>`;

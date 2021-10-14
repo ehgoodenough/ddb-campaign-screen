@@ -496,6 +496,10 @@ export const getSenses = character => {
   );
 };
 
+export const getElectrum = character => {
+  return character.currencies.ep || 0;
+};
+
 const getProficiencyValue = (character, skillId) =>
   character.characterValues.find(
     value => String(value.valueId) === String(skillId) && value.typeId === 26

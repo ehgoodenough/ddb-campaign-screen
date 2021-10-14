@@ -89,3 +89,10 @@ export const setSenses = (characterId, senses) => {
     .find('.ddbdms__passiveSkills .ddbdms__senses')
     .html(html);
 };
+
+export const setElectrum = (characterId, electrum) => {
+  const divId = getDivId(characterId);
+  $(`#${divId}`)
+    .find('.ddbdms__electrum .ddbdms__value')
+    .text(electrum);
+};

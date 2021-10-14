@@ -12,7 +12,8 @@ import {
   passiveStatsTemplate,
   saveDcBlock,
   savingThrowsBlock,
-  speedBlock
+  speedBlock,
+  electrumBlock
 } from './ui-templates';
 import {
   getArmorClass,
@@ -25,7 +26,8 @@ import {
   getSavingThrows,
   getSenses,
   getSpeeds,
-  getStats
+  getStats,
+  getElectrum
 } from '../common/character-utils';
 import {
   setAC,
@@ -35,7 +37,8 @@ import {
   setPassiveSkills,
   setSavingThrows,
   setSenses,
-  setSpeeds
+  setSpeeds,
+  setElectrum
 } from './ui-render';
 import { listCharacters } from './utils';
 
@@ -83,9 +86,10 @@ export const renderCharacterTemplate = characterId => {
     // const passiveStatsContainer = $(passiveStatsTemplate).appendTo(block);
 
     // combatStatsContainer.append(initiativeBlock);
-    combatStatsContainer.append(speedBlock);
-    combatStatsContainer.append(armorClassBlock);
+    // combatStatsContainer.append(speedBlock);
     combatStatsContainer.append(hitPointBlock);
+    combatStatsContainer.append(electrumBlock);
+    combatStatsContainer.append(armorClassBlock);
 
     // combatStatsContainer2.append(speedBlock);
     // combatStatsContainer2.append(saveDcBlock);
@@ -117,13 +121,14 @@ export const renderCharacterStats = character => {
   setPassiveSkills(character.id, getPassiveSkills(character, stats));
 
   setSenses(character.id, getSenses(character));
+
+  setElectrum(character.id, getElectrum(character));
 };
 
 export const renderCharacter = character => {
   if (!character)
     return console.log(`[DM Screen] Failed to render a character`);
-
   renderCharacterTemplate(character.id);
-
   renderCharacterStats(character);
+  console.log(character);
 };
