@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import {colortween} from "./colors.js";
 import {
   getDivId,
   passiveSkillsItemBlock,
@@ -28,8 +29,10 @@ export const setInitiative = (characterId, initiative) => {
 
 export const setHP = (characterId, currentHP, maxHP) => {
   const divId = getDivId(characterId);
+  const healthiness = 1 - (currentHP / maxHP);
   $(`#${divId}`)
     .find('.ddbdms__hp .ddbdms__hp__current')
+    .css('color', colortween("#FFFFFF", "#C65854", healthiness))
     .text(currentHP);
 
   $(`#${divId}`)
